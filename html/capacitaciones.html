@@ -1,0 +1,74 @@
+<div class="container-form">
+    <h2>Formulario de Capacitaciones</h2>
+    <form class="row needs-validation g-1" novalidate>
+        <div class="col-12">
+            <label for="titulo" class="col-form-label col-form-label-sm">Titulo<span class="text-danger"> *</span></label>
+            <input type="text" class="form-control form-control-sm save-capacitacion" id="titulo" required />
+        </div>
+        <div class="col-12">
+            <label for="objetivo" class="col-form-label col-form-label-sm">Objetivo<span class="text-danger">*</span></label>
+            <input type="text" class="form-control form-control-sm save-capacitacion" id="objetivo" required />
+        </div>
+        <div class="col-12">
+            <label for="tema" class="col-form-label col-form-label-sm">Tema<span class="text-danger">*</span></label>
+            <input type="text" class="form-control form-control-sm save-capacitacion" id="tema" required />
+        </div>
+        <div class="col-12">
+            <label for="material_utilizado" class="col-form-label col-form-label-sm">Material utilizado<span class="text-danger"> *</span></label>
+            <input type="text" class="form-control form-control-sm save-capacitacion" id="material_utilizado" required />
+        </div>
+        <div class="col-12">
+            <label for="doc_entregada" class="col-form-label col-form-label-sm">Documentación entregada<span class="text-danger"> *</span></label>
+            <input type="text" class="form-control form-control-sm save-capacitacion" id="doc_entregada" required />
+        </div>
+        <div class="col-3">
+            <label for="duracion" class="col-form-label col-form-label-sm">Duración<span
+                    class="text-danger"> *</span></label>
+            <input type="time" class="form-control form-control-sm save-capacitacion" id="duracion" required />
+        </div>
+        <div class="col-9">
+            <label for="area" class="col-form-label col-form-label-sm">Área<span class="text-danger"> *</span></label>
+            <select id="area" class="form-select form-select-sm save-capacitacion" required></select>
+        </div>
+        <div class="col">
+            <label for="fecha_evaluacion" class="col-form-label col-form-label-sm">Fecha Evaluación Eficacia<span
+                    class="text-danger"> *</span></label>
+            <input type="date" class="form-control form-control-sm save-capacitacion" id="fecha_evaluacion" required />
+        </div>
+        
+        <div class="col-auto align-self-end">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalParticipantes">
+                Participantes
+            </button>
+  
+            <!-- Modal -->
+            <div class="modal fade" id="modalParticipantes" tabindex="-1" aria-labelledby="modalParticipantesLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalParticipantesLabel">Listado de Personal y Asesores Externos</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="container">
+                        <input type="text" class="form-control form-control-sm" placeholder="Buscar..." onkeyup="UI_Capacitaciones.filterUsers(event)">
+                    </div>
+                    <div class="modal-body" id="bodyModalParticipantes">
+                        
+                    </div>
+                    <div class="modal-footer justify-content-between">
+                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-dark" onclick="UI_Capacitaciones.resumeParticioantes()">Seleccionar</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-auto align-self-end text-primary" id="selectedParticipant">
+            <i class="bi bi-circle"></i>
+        </div>
+        <div class="col-8 mt-3 mx-auto">
+            <button type="button" class="btn btn-primary w-100" id="btnSubmitCapacitacion" disabled onclick="UI_Capacitaciones.saveCapacitacion(event)">Guardar</button>
+        </div>
+    </form>
+</div>

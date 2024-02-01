@@ -1,0 +1,17 @@
+.loader-container {
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loader {
+    text-align: center;
+}
+#interface {
+    position: relative;
+    top: 75px;
+}
+.container-form {
+    max-width: 500px;
+    margin: auto;
+}
