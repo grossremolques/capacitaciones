@@ -1,0 +1,15 @@
+{
+  "name": "capacitaciones",
+  "version": "1.0.0",
+  "description": "Formulario para el registro de capacitaciones",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d src"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
+  }
+}
