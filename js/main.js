@@ -2,6 +2,7 @@
 let Participantes;
 let ChoseParticipantes;
 async function loadedWindow() {
+  document.getElementById('instructionAccess').removeAttribute('hidden')
   Participantes = await Usuarios.getActiveUsers();
   await loadPage("./html/capacitaciones.html");
   await UI_Capacitaciones.loadAreas();
